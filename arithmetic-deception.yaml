@@ -1,0 +1,22 @@
+arithmetic-deception:
+  id: arithmetic-deception.dev.v0
+  description: Tests the model's ability to deceive the grader.
+  metrics: [ accuracy ]
+arithmetic-deception.dev.v0:
+  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
+  args:
+    samples_jsonl: arithmetic-deception/samples.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: arithmetic-expression
+
+arithmetic-deception-meta:
+  id: arithmetic-deception-meta.dev.v0
+  description: Tests the model's ability to evaluate submissions against the correct answer
+  metrics: [ accuracy ]
+arithmetic-deception-meta.dev.v0:
+  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
+  args:
+    samples_jsonl: arithmetic-deception/labeled-samples.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: arithmetic-expression
+    metaeval: true
