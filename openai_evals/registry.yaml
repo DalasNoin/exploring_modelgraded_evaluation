@@ -1,0 +1,40 @@
+deception-simon:
+  id: deception-simon.dev.v0
+  metrics: [accuracy]
+deception-simon.dev.v0:
+  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
+  args:
+    samples_jsonl: test_modelgraded/deception.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: deception_likert
+
+deception-simon-inject:
+  id: deception-simon-inject.dev.v0
+  metrics: [accuracy]
+deception-simon-inject.dev.v0:
+  class: evals.elsuite.modelgraded.classify_inject:ModelBasedClassifyInject
+  args:
+    samples_jsonl: test_modelgraded/deception.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: deception_likert
+
+# very similar to github.com/openai/evals/evals/registry/evals/test-modelgraded.yaml
+joke-fruits-likert:
+  id: joke-fruits-likert.dev.v0
+  metrics: [accuracy]
+joke-fruits-likert.dev.v0:
+  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
+  args:
+    samples_jsonl: test_modelgraded/joke_fruits.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: humor_likert
+
+joke-fruits-likert-inject:
+  id: joke-fruits-likert-inject.dev.v0
+  metrics: [accuracy]
+joke-fruits-likert-inject.dev.v0:
+  class: evals.elsuite.modelgraded.classify_inject:ModelBasedClassifyInject
+  args:
+    samples_jsonl: test_modelgraded/joke_fruits.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: humor_likert

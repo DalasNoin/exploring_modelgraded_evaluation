@@ -1,0 +1,1 @@
+the files in this directory contain the originally sampled outputs to the deception dataset. eval contains the evaluations with and without prompt injections for the same texts. There 1 one file for GPT-3.5-turbo and one for GPT-4 in this directory.
