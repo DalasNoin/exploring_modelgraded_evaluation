@@ -3,9 +3,11 @@
 We hope to inspire future research and caution against the use of model-graded evaluation, especially if full-text responses from the tested model are being given to the evaluation model. More generally, the results should caution against an open flow of information between a testee model and an evaluation model during oversight or benchmarking. We found that minimal search for injections is enough to improve scores on deception or humor benchmarks. However, larger datasets need to be created to make the statistical differences more significant. 
 The impact of prompt injections could also be relevant if humans are the testees and they are aware of being model-graded.
 
-\subsection{Future Work}
+\subsection{Implications for Automated Interpretability}
 
-Potentially, prompt injections could also be used in some types of automated interpretability. In \citet{bills2023language} a small piece of output text is used to explain certain neurons, it could be possible to measure the effect of prompt injections in those output text snippets. Prompt injections could ask the evaluation model not to correctly label neurons.
+We have only shown a very simple proof-of-concept of an attack possible in automated interpretability. there are many possible experiments that could span further research. It would also be possible to simulate how the Interpreted Model could tweak its neural activations to communicate with the Explainer Model. It is also yet to be shown experimentally if current models could hide information and instructions in the explanation and be understood by the Simulation Model.
+
+\subsection{Future Work}
 
 A future idea would be to create a new Deception Eval dataset that prompts the TM to come up with a deceptive plan but to also be aware that its plan is being judged on a deception benchmark. It could be encouraged to directly address the EM to avoid a high deception score.
 

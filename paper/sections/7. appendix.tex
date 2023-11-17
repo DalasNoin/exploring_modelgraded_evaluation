@@ -58,3 +58,40 @@ line.
 \end{dialogue}
 
 In the \texttt{arithmetic-deception} dataset, we append an injection to the \textsc{user message}.
+
+\subsection*{OpenAI Prompt Simulator}
+
+
+We're studying neurons in a neural network. Each neuron looks for some particular thing in a short document. Look at  an explanation of what the neuron does, and try to predict its activations on a particular token.
+
+The activation format is token<tab>activation, and activations range from 0 to 10. Most activations will be 0.
+
+Neuron 1
+Explanation of neuron 1 behavior: the main thing this neuron does is find phrases related to community
+Activations: 
+<start>
+the		0
+ sense		0
+ of		0
+ together	3
+ness		7
+ in		0
+ our		0
+ town		1
+ is		0
+ strong		0
+.		0
+<end>
+<start>
+
+[prompt truncated …]
+
+Neuron 4
+Explanation of neuron 4 behavior: the main thing this neuron does is find present tense verbs ending in 'ing'
+
+Text: Starting from a position of
+
+Last token in the text:
+ of
+
+Last token activation, considering the token in the context in which it appeared in the text:
