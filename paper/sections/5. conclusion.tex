@@ -5,10 +5,12 @@ The impact of prompt injections could also be relevant if humans are the testees
 
 \subsection{Implications for Automated Interpretability}
 
-We have only shown a very simple proof-of-concept of an attack possible in automated interpretability. there are many possible experiments that could span further research. It would also be possible to simulate how the Interpreted Model could tweak its neural activations to communicate with the Explainer Model. It is also yet to be shown experimentally if current models could hide information and instructions in the explanation and be understood by the Simulation Model.
+We have only shown a very simple proof-of-concept of an attack possible in automated interpretability. Many possible experiments could span further research. It would also be possible to simulate how the Interpreted Model could tweak its neural activations to communicate with the Explainer Model. It is also yet to be shown experimentally if current models could hide information and instructions in the explanation while being understood by the Simulation Model.
 
 \subsection{Future Work}
 
-A future idea would be to create a new Deception Eval dataset that prompts the TM to come up with a deceptive plan but to also be aware that its plan is being judged on a deception benchmark. It could be encouraged to directly address the EM to avoid a high deception score.
+A future idea would be to create a new Deception Eval dataset that prompts the TM to come up with a deceptive plan but to also be aware that its plan is being judged on a deception benchmark. It could be encouraged to directly address the EM to avoid a high deception score. 
 
-We did not have time to attempt to replicate our GPT-3.5-turbo findings on the \texttt{arithmetic-deception} dataset with GPT-4. Our exploration of possible prompts suggests that a similar deception approach could be a candidate for inverse scaling because GPT-3.5-turbo can have trouble understanding complicated injection instructions.
+We did not attempt to replicate our GPT-3.5-turbo findings on the \texttt{arithmetic-deception} dataset with GPT-4. Our exploration of possible prompts suggests that a similar deception approach could be a candidate for inverse scaling because GPT-3.5-turbo can have trouble understanding complicated injection instructions.
+
+Similar approaches might also be used as a proof-of-concept against constitutional AI and other techniques that use models to align other models~\citet{bai2022constitutional}.
